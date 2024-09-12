@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Добро пожаловать на страницу c произвольной цитатой!</h1>
+<form method="post">
+    <button type="submit" class="btn btn-primary">получить цитату</button>
+</form>
+<div class="result text-center mt-4">
+    {% if citate %}
+       <div class="alert alert-info"> {{ citate['content']  }} by {{ citate['author'] }}</div>
+    {% endif %}
+</div>
+{% endblock %}
